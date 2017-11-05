@@ -12,8 +12,11 @@
 }
 .curved-content {
 	background-color: #FFFFFF;
+	border-radius: 0px 0px 0px 0px;
 	width: device-width;
-	padding: 1px;
+	text-align: left;
+	padding: 0px 0px 0px 0px;
+	box-shadow: 0px 10px 10px #DDDDDD;
 	display: block;
 	border-style: solid;
 	border-width: 1px;
