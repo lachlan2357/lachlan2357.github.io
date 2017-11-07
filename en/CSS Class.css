@@ -49,12 +49,10 @@
 	padding: 20px 0px;
 }
 .button:hover {
-	background-color: #000000;
-	box-shadow: 0px 10px 10px #DDDDDD
+	background-color: #111111;
 }
 .button:active {
 	background-color: #0000FF;
-	box-shadow: 0px 0px 0px #DDDDDD
 }
 .button-left {
 	border-radius: 0px 0px 0px 10px;
