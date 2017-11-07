@@ -53,8 +53,8 @@
 	background-color: #000000;
 }
 .button-left {
-	border-radius: 0px 0px 10px 0px;
+	border-radius: 0px 0px 0px 10px;
 }
 .button-right {
-	border-radius: 0px 0px 0px 10px;
+	border-radius: 0px 0px 10px 0px;
 }
