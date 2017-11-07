@@ -35,3 +35,11 @@
 	border-color: #0000FF;
 	border-width: 10px 0px;
 }
+.navbar {
+}
+.button {
+	background-color: #0000FF;
+	color: #FFFFFF;
+	width: 200px;
+	text-decoration: none;
+}
