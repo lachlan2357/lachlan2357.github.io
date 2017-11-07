@@ -34,7 +34,7 @@
 	color:#EEEEEE;
 }
 .heading {
-	width: 100%;
+	width: device-width;
 	margin: 0px;
 	padding: 0px 0px 0px 0px;
 	background-color: #0000FF;
