@@ -19,8 +19,7 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: #0000FF;
-	border-radius: 10px 10px 0px 0px;
-	height: 25px;
+	border-radius: 0px 0px 10px 10px;
 }
 li {
 	float: left;
