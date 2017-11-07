@@ -15,27 +15,3 @@ h3 {
 	font-family: Swiss;
 	font-size: 15px;
 }
-ul {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	background-color: #0000FF;
-	border-radius: 0px 0px 10px 10px;
-}
-li {
-	float: left;
-}
-li a {
-	display: block;
-	color: #FFFFFF;
-	font-family: Swiss;
-	text-align: center;
-	padding: 20px 0px;
-	text-decoration: none;
-	width: 200px;
-	
-}
-li a:hover {
-	background-color: #000000;
-}
