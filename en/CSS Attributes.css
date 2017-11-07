@@ -19,7 +19,7 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: #0000FF;
-	border-radius: 10px 0px 10px 0px;
+	border-radius: 0px 10px 10px 0px;
 	height: 50px;
 }
 li {
