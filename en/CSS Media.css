@@ -1,4 +1,5 @@
 @media only screen and (min-width: 500px) {
+	/*Desktop*/
 	.button {
 		width:20%;
 		border-radius: 0px 0px 0px 0px;
@@ -6,12 +7,24 @@
 	.navbar {
 		border-radius: 0px 0px 10px 10px;
 	}
+	.button-left {
+		border-radius: 0px 0px 0px 10px;
+	}
+	.button-right {
+		border-radius: 0px 0px 10px 0px;
 }
 @media only screen and (max-width: 500px) {
+	/*Phone*/
 	.button {
 		width: 100%;
 		border-radius: 0px 0px 10px 10px;
 	}
 	.navbar {
 		border-radius: 0px 0px 10px 10px
+			
+	.button-left {
+		border-radius: 0px 0px 10px 10px;
+	}
+	.button-right {
+		border-radius: 0px 0px 10px 10px;
 }
