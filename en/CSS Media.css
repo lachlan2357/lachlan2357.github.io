@@ -3,10 +3,15 @@
 		width:20%;
 		border-radius: 0px 0px 0px 0px;
 	}
+	.navbar {
+		border-radius: 0px 0px 10px 10px;
+	}
 }
 @media only screen and (max-width: 500px) {
 	.button {
 		width: 100%;
 		border-radius: 0px 0px 10px 10px;
 	}
+	.navbar {
+		border-radius: 0px 0px 10px 10px
 }
