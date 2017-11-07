@@ -35,5 +35,7 @@
 }
 .heading {
 	background-color: #0000FF;
-	border-style: none;
+	border-style: solid;
+	border-color: #0000FF;
+	border-width: 5px;
 }
