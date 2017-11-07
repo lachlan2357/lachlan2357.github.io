@@ -21,10 +21,11 @@
 	}
 	.navbar {
 		border-radius: 0px 0px 10px 10px;
-			
+	}
 	.button-left {
 		border-radius: 0px 0px 10px 10px;
 	}
 	.button-right {
 		border-radius: 0px 0px 10px 10px;
+	}
 }
