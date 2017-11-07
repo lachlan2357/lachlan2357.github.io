@@ -27,13 +27,7 @@ li {
 	float: left;
 }
 li a {
-	display: block;
-	color: #FFFFFF;
-	font-family: Swiss;
-	text-align: center;
-	padding: 20px 0px;
-	text-decoration: none;
-	width: 200px;
+	
 }
 li a:hover {
 	background-color: #000000;
