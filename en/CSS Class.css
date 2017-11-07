@@ -32,10 +32,10 @@
 }
 .heading {
 	margin: 0px;
-	padding: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
 	background-color: #0000FF;
 	color: #FFFFFF;
 	border-style: solid;
-	border-color: #000000;
+	border-color: #0000FF;
 	border-width: 10px;
 }
