@@ -51,7 +51,7 @@
 .button:hover {
 	background-color: #000000;
 }
-.button:click {
+.button:active {
 	background-color: #FF0000;
 .button-left {
 	border-radius: 0px 0px 0px 10px;
