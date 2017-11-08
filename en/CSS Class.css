@@ -63,5 +63,7 @@
 	border-radius: 0px 0px 10px 0px;
 }
 .button-text {
+	font-family: Serif;
+	text-align: center;
 	text-decoration: none;
 }
