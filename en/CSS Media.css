@@ -13,9 +13,11 @@
 	.button-right {
 		border-radius: 0px 0px 10px 0px;
 	}
+	.heading {
+		text-align: left;
+	}
 	h1 {
 		font-size: 50px;
-		text-align: left;
 	}
 	h2 {
 		font-size: 25px;
@@ -39,9 +41,11 @@
 	.button-right {
 		border-radius: 0px 0px 10px 10px;
 	}
+	.heading {
+		text-align: center;
+	}
 	h1 {
 		font-size: 25px;
-		text-align: center;
 	}
 	h2 {
 		font-size: 15px;
