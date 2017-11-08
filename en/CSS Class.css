@@ -49,7 +49,7 @@
 	padding: 20px 0px;
 }
 .button:hover {
-	background-color: #111111;
+	transition: background-color: #111111;
 }
 .button:active {
 	background-color: #000000;
