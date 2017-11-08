@@ -42,14 +42,16 @@
 .button {
 	background-color: #0000FF;
 	color: #FFFFFF;
-	font-family:Swiss;
+	font-family:Serif;
 	font-size: 15px;
 	text-decoration: none;
 	border: none;
 	padding: 20px 0px;
+	transition: background-color 0.5;
+	
 }
 .button:hover {
-	transition: background-color: #111111;
+	background-color: #111111;
 }
 .button:active {
 	background-color: #000000;
