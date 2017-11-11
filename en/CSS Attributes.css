@@ -1,3 +1,4 @@
+
 body {
 	background-color: #FFFFFF;
 	font-family: Serif;
@@ -6,10 +7,13 @@ body {
 }
 h1 {
 	font-size: 50px;
+	font-family: Serif;
 }
 h2 {
 	font-size: 25px;
+	font-family: Serif;
 }
 h3 {
 	font-size: 15px;
+	font-family: Serif;
 }
