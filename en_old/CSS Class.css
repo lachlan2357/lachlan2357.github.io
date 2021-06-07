@@ -1,0 +1,69 @@
+.curved-heading {
+	background-color: #EEEEEE;
+	border-radius: 50px 50px 0px 0px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	box-shadow: 0px -10px 10px #DDDDDD;
+	display: block;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #EEEEEE;
+}
+.curved-content {
+	background-color: #FFFFFF;
+	border-radius: 0px 0px 0px 0px;
+	text-align: left;
+	padding: 0px 0px 0px 0px;
+	display: block;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #EEEEEE;
+	
+}
+.text-margin-5 {
+	margin-left: 5%;
+}
+.disclamer {
+	color:#EEEEEE;
+}
+.heading {
+	margin: 0px;
+	padding: 0px 0px;
+	background-color: #0000FF;
+	color: #FFFFFF;
+	border-style: solid;
+	border-color: #0000FF;
+	border-width: 10px 0px;
+}
+.navbar {
+	background-color: #0000FF;
+	border-radius: 0px 0px 10px 10px;
+}
+.button {
+	background-color: #0000FF;
+	color: #FFFFFF;
+	font-family:Serif;
+	font-size: 15px;
+	text-decoration: none;
+	border: none;
+	padding: 10px 0px;
+	transition: background-color 0.25s;
+	
+}
+.button:hover {
+	background-color: #111111;
+}
+.button:active {
+	background-color: #000000;
+}
+.button-left {
+	border-radius: 0px 0px 0px 10px;
+}
+.button-right {
+	border-radius: 0px 0px 10px 0px;
+}
+.button-text {
+	font-family: Serif;
+	text-align: center;
+	text-decoration: none;
+}
