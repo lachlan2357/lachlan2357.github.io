@@ -1,24 +1,37 @@
+html {
+	font-family: Roboto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
 body {
 	margin: 0px;
 	background: pink;
+	width: 100vw;
 }
 
 /* navbar */
 .navbar {
 	list-style-type: none;
 	margin: 0px;
+	width: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 0px;
-	top: 10px;
+	top: 0px;
 	position: fixed;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 0px;
 	box-shadow: 0px 0px 5px black;
 }
 
 .navbar li {
 	float: left;
+	width: 33.33%;
 }
 
 /* navbar items */
@@ -26,17 +39,16 @@ body {
 	text-decoration: none;
 	color: black;
 	margin: 0px;
-	width: 100px;
 	padding: 15px 0px;
 	display: block;
-	background: #777777;
+	background: #94949F;
 	color: black;
 
-	transition: background 0.25s ease, color 0.25s ease;
+	transition: 0.25s ease;
 }
 
 .navbar li a:hover {
-	background: #555555;
+	background: #4C4C51;
 	color: white;
 
 	transition: 0.25s ease;
@@ -52,4 +64,36 @@ body {
 
 .navbar li:first-child:last-child a {
 	border-radius: 10px 10px 10px 10px;
+}
+
+div.hero {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("images/hero.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+img.hero {
+	display: block;
+	margin: auto;
+	width: inherit;
+	height: inherit;
+	
+}
+
+h1.title {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar {
+		top: 10px;
+		width: 300px;
+		border-radius: 10px;
+	}
 }
