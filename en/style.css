@@ -1,3 +1,8 @@
+:root {
+  --primary: #94949F;
+  --secondary: #64646B;
+}
+
 html {
 	font-family: Roboto;
 	scrollbar-width: none;
@@ -27,6 +32,7 @@ body {
 	text-align: center;
 	border-radius: 0px;
 	box-shadow: 0px 0px 5px black;
+	z-index: 500;
 
 	transition: 0.25s ease;
 }
@@ -43,14 +49,14 @@ body {
 	margin: 0px;
 	padding: 15px 0px;
 	display: block;
-	background: #94949F;
+	background: var(--primary);
 	color: black;
 
 	transition: 0.25s ease;
 }
 
 .navbar li a:hover {
-	background: #64646B;
+	background: var(--secondary);
 	color: white;
 
 	transition: 0.25s ease;
@@ -92,6 +98,43 @@ h1.title {
   transform: translate(-50%, -50%);
 }
 
+/* scrollbar */
+
+#scrollbar {
+	width: 10px;
+	height: 0px;
+	opacity: 0;
+	background: var(--primary);
+	position: fixed;
+	top: 0px;
+	right: 5px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px black;
+
+	transition: opacity 1s ease;
+}
+
+/* scroll to top button */
+
+#scrolltotop {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	border-radius: 50%;
+	border: none;
+	box-shadow: 0px 0px 10px black;
+	background: var(--primary);
+
+	cursor: pointer;
+}
+
+#scrolltotop:hover {
+	background: var(--secondary);
+	transition: 0.25s ease;
+}
+
 @media only screen and (min-width: 768px) {
 	.navbar {
 		top: 10px;
@@ -111,20 +154,4 @@ h1.title {
 	.navbar li:first-child:last-child a {
 		border-radius: 10px 10px 10px 10px;
 	}
-}
-
-/* scrollbar */
-
-#scrollbar {
-	width: 10px;
-	height: 0px;
-	opacity: 0;
-	background: #94949F;
-	position: fixed;
-	top: 0px;
-	right: 5px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px black;
-
-	transition: opacity 1s ease;
 }

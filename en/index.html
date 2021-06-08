@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 	<script src="javascript.js"></script>
 </head>
-<body onload="testfunction()" onscroll="testfunction()" id="test">
+<body onload="OnScroll()" onscroll="OnScroll()" id="test">
 	<!-- navbar -->
 	<ul class="navbar">
 		<li><a href="">Item1</a></li>
@@ -15,7 +15,11 @@
 	</ul>
 
 	<!-- scrollbar -->
-	<div id="scrollbar" class="scrollbar">
+	<div id="scrollbar">
+	</div>
+
+	<!-- scroll to top button -->
+	<div id="scrolltotop" onclick="ScrollToTop()">
 	</div>
 
 	<!-- hero image -->

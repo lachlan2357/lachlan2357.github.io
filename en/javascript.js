@@ -1,4 +1,4 @@
-function testfunction() {
+function OnScroll() {
 	var bodyHeight = document.getElementById("test").offsetHeight;
 	var viewportHeight = window.innerHeight;
 
@@ -14,4 +14,8 @@ function testfunction() {
 
 	document.getElementById("scrollbar").style.top = "calc(((100vh) * " + String(scrolledPercent) + ") + 10px)";
 	document.getElementById("scrollbar").style.opacity = "1";
+}
+
+function ScrollToTop() {
+	window.scrollTo({top: 0, behavior: 'smooth'});
 }
