@@ -33,7 +33,7 @@ body {
 
 .navbar li {
 	float: left;
-	width: 33.33%;
+	width: calc(100%/3);
 }
 
 /* navbar items */
@@ -111,4 +111,14 @@ h1.title {
 	.navbar li:first-child:last-child a {
 		border-radius: 10px 10px 10px 10px;
 }
+
+/* scrollbar */
+
+#scrollbar {
+	width: 50px;
+	height: 25vh;
+	background: lime;
+	position: fixed;
+	top: 0px;
+	right: 0px;
 }
