@@ -97,7 +97,7 @@ h1.title {
 		top: 10px;
 		width: 300px;
 		border-radius: 10px;
-		top: calc(100vh - 60px);
+		top: 10px;
 	}
 
 	.navbar li:first-child a {
