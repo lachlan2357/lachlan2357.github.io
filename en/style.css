@@ -50,22 +50,22 @@ body {
 }
 
 .navbar li a:hover {
-	background: #4C4C51;
+	background: #64646B;
 	color: white;
 
 	transition: 0.25s ease;
 }
 
 .navbar li:first-child a {
-	border-radius: 10px 0px 0px 10px;
+	border-radius: 0px
 }
 
 .navbar li:last-child a {
-	border-radius: 0px 10px 10px 0px;
+	border-radius: 0px;
 }
 
 .navbar li:first-child:last-child a {
-	border-radius: 10px 10px 10px 10px;
+	border-radius: 10px;
 }
 
 div.hero {
@@ -97,5 +97,18 @@ h1.title {
 		top: 10px;
 		width: 300px;
 		border-radius: 10px;
+		top: calc(100vh - 60px);
 	}
+
+	.navbar li:first-child a {
+		border-radius: 10px 0px 0px 10px;
+	}
+
+	.navbar li:last-child a {
+		border-radius: 0px 10px 10px 0px;
+	}
+
+	.navbar li:first-child:last-child a {
+		border-radius: 10px 10px 10px 10px;
+}
 }
