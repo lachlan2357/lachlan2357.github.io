@@ -1,12 +1,18 @@
 :root {
   --primary: #94949F;
   --secondary: #64646B;
+  --background: #DDDDDD;
+  --foreground: #FFFFFF;
+  --boxShadow: #000000;
 }
 
 html {
 	font-family: Roboto;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	background: var(--background);
+
+	transition: 0.25s ease;
 }
 
 html::-webkit-scrollbar {
@@ -15,7 +21,6 @@ html::-webkit-scrollbar {
 
 body {
 	margin: 0px;
-	background: pink;
 	width: 100vw;
 }
 
@@ -31,7 +36,7 @@ body {
 	position: fixed;
 	text-align: center;
 	border-radius: 0px;
-	box-shadow: 0px 0px 5px black;
+	box-shadow: 0px 0px 5px #000000;
 	z-index: 500;
 
 	transition: 0.25s ease;
@@ -74,13 +79,17 @@ body {
 	border-radius: 10px;
 }
 
-div.hero {
+div#hero {
 	width: 100vw;
 	height: 100vh;
 	background-image: url("images/hero.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	box-shadow: 0px 0px 20px #000000;
+	border-radius: 0px;
+
+	transition: 0.25s ease;
 }
 
 img.hero {
@@ -109,7 +118,7 @@ h1.title {
 	top: 0px;
 	right: 5px;
 	border-radius: 5px;
-	box-shadow: 0px 0px 10px black;
+	box-shadow: 0px 0px 10px #000000;
 	z-index: 1000;
 
 	transition: opacity 1s ease;
@@ -125,7 +134,7 @@ h1.title {
 	right: 25px;
 	border-radius: 50%;
 	border: none;
-	box-shadow: 0px 0px 10px black;
+	box-shadow: 0px 0px 10px #000000;
 	background: var(--primary);
 	z-index: 500;
 
@@ -135,6 +144,45 @@ h1.title {
 #scrolltotop:hover {
 	background: var(--secondary);
 	transition: 0.25s ease;
+}
+
+.container {
+	margin: 20px 100px;
+	width: 100vw - 100px;
+	height: 100px;
+}
+
+.card {
+	background-color: var(--foreground);
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px var(--boxShadow);
+	
+	transition: 0.25s ease;
+}
+
+.column {
+	height: 100%;
+	display: inline-block;
+}
+
+.col-1 {
+	width: 100%;
+}
+
+.col-2 {
+	width: 50%;
+}
+
+.col-3 {
+	width: calc(100%/3);
+}
+
+.col-4 {
+	width: 25%;
+}
+
+.red {
+	background: red;
 }
 
 @media only screen and (min-width: 768px) {
