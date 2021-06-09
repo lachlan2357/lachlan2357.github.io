@@ -1,0 +1,28 @@
+html, body {
+	margin: 0px;
+}
+
+#navbar {
+	list-style-type: none;
+	position: fixed;
+	bottom: 0px;
+	width: 100vw;
+	background: pink;
+	margin: 0px;
+	padding: 0px;
+	box-shadow: 0px 0px 10px #787878;
+}
+
+#navbar li {
+	width: 50%;
+	display: block;
+	float: left;
+	text-align: center;
+	padding: 15px 0px;
+
+	cursor: pointer;
+}
+
+#navbar li.active {
+
+}
