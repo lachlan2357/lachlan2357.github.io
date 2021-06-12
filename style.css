@@ -195,7 +195,7 @@ h1.title {
 }
 
 .container {
-	margin: 20px 100px;
+	margin: 20px 5%;
 	padding: 60px 20px;
 	width: 100vw - 100px;
 }
