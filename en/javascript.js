@@ -4,26 +4,30 @@ function OnScroll() {
 	/* scrollbar */
 	var bodyHeight = document.getElementById("test").offsetHeight;
 	var viewportHeight = window.innerHeight;
-
 	var percent = viewportHeight / bodyHeight;
 
 	document.getElementById("scrollbar").style.height = "calc((100vh - 40px) * " + String(percent) + ")";
 
 	var scrolledHeight = window.pageYOffset;
-
 	var scrolledPercent = scrolledHeight / bodyHeight;
 
-	console.log(String(scrolledPercent));
-
-	document.getElementById("scrollbar").style.top = "calc(((100vh) * " + String(scrolledPercent) + ") + 10px)";
+	document.getElementById("scrollbar").style.top = "calc(((100vh - 40px) * " + String(scrolledPercent) + ") + 20px)";
 	document.getElementById("scrollbar").style.opacity = "1";
 
 	/* hero border-radius */
 
 	if (scrolledHeight == 0) {
 		document.getElementById("hero").style.borderRadius = "0px";
+		document.getElementById("navbar").style.boxShadow = "0px 0px 0px #000000";
+		document.getElementById("navbar").style.background = "transparent";
+		document.getElementById("scrolltotop").style.opacity = "0"
+		document.getElementById("scrollbar").style.opacity = "0"
 	} else {
 		document.getElementById("hero").style.borderRadius = "0px 0px 10px 10px";
+		document.getElementById("navbar").style.boxShadow = "0px 0px 5px #000000";
+		document.getElementById("navbar").style.background = "var(--small-gradient)";
+		document.getElementById("scrolltotop").style.opacity = "1"
+		document.getElementById("scrollbar").style.opacity = "1"
 	}
 }
 

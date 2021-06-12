@@ -3,15 +3,16 @@
 <head>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Biryani:wght@900&family=Montserrat&display=swap" rel="stylesheet">
 	<script src="javascript.js"></script>
 </head>
-<body onload="OnScroll()" onscroll="OnScroll()" id="test">
+<body onload="OnScroll()" onscroll="OnScroll()" onresize="OnScroll()" id="test">
 	<!-- navbar -->
-	<ul class="navbar">
-		<li><a href="">Item1</a></li>
-		<li><a href="">Item2</a></li>
-		<li><a href="">Item3</a></li>
+	<ul id="navbar">
+		<li><a class="navbar-item" href="">Item1</a></li>
+		<li><a class="navbar-item" href="">Item2</a></li>
+		<li><a class="navbar-item" href="">Item3</a></li>
 	</ul>
 
 	<!-- scrollbar -->
@@ -24,12 +25,15 @@
 
 	<!-- hero image -->
 	<div id="hero">
-		<h1 class="title">title</h1>
+		<div id="hero-text">
+			<h1 class="title">MY LITTLE <br> CORNER <br> OF THE <br> INTERNET</h1>
+		</div>
 	</div>
 
 	<div class="container card">
 		<div class="column col-3"></div><div class="column col-3"></div><div class="column col-3"></div>
 	</div>
+
 
 </body>
 	

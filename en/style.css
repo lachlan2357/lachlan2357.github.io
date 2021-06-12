@@ -1,13 +1,25 @@
 :root {
-  --primary: #94949F;
-  --secondary: #64646B;
   --background: #DDDDDD;
   --foreground: #FFFFFF;
   --boxShadow: #000000;
+
+  --one: #C352FF;
+  --two: #875CE6;
+  --three: #696EFA;
+  --four: #5C8EE6;
+  --five: #65CDFA;
+  
+  --gradient: linear-gradient(to bottom right, var(--one), var(--two), var(--three), var(--four), var(--five));
+  --small-gradient: linear-gradient(to bottom right, var(--two), var(--three));
+}
+
+* {
+	margin: 0;
+    padding: 0;
 }
 
 html {
-	font-family: Roboto;
+	font-family: Montserrat;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	background: var(--background);
@@ -20,76 +32,79 @@ html::-webkit-scrollbar {
 }
 
 body {
-	margin: 0px;
 	width: 100vw;
 }
 
 /* navbar */
-.navbar {
+#navbar {
 	list-style-type: none;
-	margin: 0px;
 	width: 100%;
 	left: 50%;
-	transform: translateX(-50%);
-	padding: 0px;
 	top: 0px;
+	background: transparent;
+	transform: translateX(-50%);
 	position: fixed;
 	text-align: center;
 	border-radius: 0px;
-	box-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px;
 	z-index: 500;
 
 	transition: 0.25s ease;
 }
 
-.navbar li {
+#navbar li {
 	float: left;
 	width: calc(100%/3);
 }
 
 /* navbar items */
-.navbar li a {
+.navbar-item {
 	text-decoration: none;
-	color: black;
-	margin: 0px;
+	color: white;
 	padding: 15px 0px;
 	display: block;
-	background: var(--primary);
-	color: black;
 
 	transition: 0.25s ease;
 }
 
-.navbar li a:hover {
-	background: var(--secondary);
-	color: white;
+#navbar li a:hover {
+	background: var(--foreground);
+	color: var(--two);
 
 	transition: 0.25s ease;
 }
 
-.navbar li:first-child a {
+#navbar li:first-child a {
 	border-radius: 0px
 }
 
-.navbar li:last-child a {
+#navbar li:last-child a {
 	border-radius: 0px;
 }
 
-.navbar li:first-child:last-child a {
+#navbar li:first-child:last-child a {
 	border-radius: 10px;
 }
 
 div#hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("images/hero.jpg");
+	text-align: center;
+	vertical-align: center;
+	background-image: var(--gradient);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0px 0px 20px #000000;
 	border-radius: 0px;
+}
 
-	transition: 0.25s ease;
+div#hero-text {
+	width: 95%;
 }
 
 img.hero {
@@ -101,10 +116,13 @@ img.hero {
 }
 
 h1.title {
-	position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	font-family: Biryani;
+	display: absolute;
+	color: white;
+	font-size: 500%;
+	text-align: center;
+	line-height: 1em;
+	cursor: default;
 }
 
 /* scrollbar */
@@ -113,7 +131,6 @@ h1.title {
 	width: 10px;
 	height: 0px;
 	opacity: 0;
-	background: var(--primary);
 	position: fixed;
 	top: 0px;
 	right: 5px;
@@ -121,7 +138,7 @@ h1.title {
 	box-shadow: 0px 0px 10px #000000;
 	z-index: 1000;
 
-	transition: opacity 1s ease;
+	transition: opacity 0.25s ease;
 }
 
 /* scroll to top button */
@@ -135,10 +152,12 @@ h1.title {
 	border-radius: 50%;
 	border: none;
 	box-shadow: 0px 0px 10px #000000;
-	background: var(--primary);
+	background: white;
 	z-index: 500;
+	opacity: 0;
 
 	cursor: pointer;
+	transition: 0.25s ease;
 }
 
 #scrolltotop:hover {
@@ -149,7 +168,7 @@ h1.title {
 .container {
 	margin: 20px 100px;
 	width: 100vw - 100px;
-	height: 100px;
+	height: 200vh;
 }
 
 .card {
@@ -186,22 +205,22 @@ h1.title {
 }
 
 @media only screen and (min-width: 768px) {
-	.navbar {
+	#navbar {
 		top: 10px;
 		width: 300px;
 		border-radius: 10px;
 		top: 10px;
 	}
 
-	.navbar li:first-child a {
+	#navbar li:first-child a {
 		border-radius: 10px 0px 0px 10px;
 	}
 
-	.navbar li:last-child a {
+	#navbar li:last-child a {
 		border-radius: 0px 10px 10px 0px;
 	}
 
-	.navbar li:first-child:last-child a {
+	#navbar li:first-child:last-child a {
 		border-radius: 10px 10px 10px 10px;
 	}
 }
