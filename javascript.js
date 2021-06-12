@@ -31,6 +31,9 @@ function OnScroll() {
 		document.getElementById("scrollbar").style.opacity = "1"
 		document.getElementById("scrolltotop").style.cursor = "pointer";
 	}
+
+	var titleSize = Math.sqrt(3.2 * window.innerWidth);
+	document.getElementById("title").style.fontSize = String(titleSize) + "px";
 }
 
 function ScrollToTop() {

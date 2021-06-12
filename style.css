@@ -3,11 +3,17 @@
   --foreground: #FFFFFF;
   --boxShadow: #000000;
 
-  --one: #C352FF;
-  --two: #875CE6;
-  --three: #696EFA;
-  --four: #5C8EE6;
-  --five: #65CDFA;
+  --oneold: #C352FF;
+  --twoold: #875CE6;
+  --threeold: #696EFA;
+  --fourold: #5C8EE6;
+  --fiveold: #65CDFA;
+
+  --one: #F159FF;
+  --two: #AA60E6;
+  --three: #876EFA;
+  --four: #6078E6;
+  --five: #69B6FA;
   
   --gradient: linear-gradient(to bottom right, var(--one), var(--two), var(--three), var(--four), var(--five));
   --small-gradient-purple: linear-gradient(to bottom right, var(--two), var(--three));
@@ -96,7 +102,6 @@ div#hero {
 	width: 100vw;
 	height: 100vh;
 	text-align: center;
-	vertical-align: center;
 	background-image: var(--gradient);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -127,7 +132,7 @@ h1.title {
 	font-family: Biryani;
 	display: absolute;
 	color: white;
-	font-size: 500%;
+	font-size: 80px;
 	text-align: center;
 	line-height: 1em;
 	cursor: default;
@@ -191,8 +196,13 @@ h1.title {
 
 .container {
 	margin: 20px 100px;
+	padding: 60px 20px;
 	width: 100vw - 100px;
-	height: 200vh;
+}
+
+h2 {
+	text-align: center;
+	font-size: 36px;
 }
 
 .card {
