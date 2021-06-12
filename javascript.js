@@ -22,12 +22,14 @@ function OnScroll() {
 		document.getElementById("navbar").style.background = "transparent";
 		document.getElementById("scrolltotop").style.opacity = "0"
 		document.getElementById("scrollbar").style.opacity = "0"
+		document.getElementById("scrolltotop").style.cursor = "default";
 	} else {
 		document.getElementById("hero").style.borderRadius = "0px 0px 10px 10px";
 		document.getElementById("navbar").style.boxShadow = "0px 0px 5px #000000";
-		document.getElementById("navbar").style.background = "var(--small-gradient)";
+		document.getElementById("navbar").style.background = "var(--small-gradient-purple)";
 		document.getElementById("scrolltotop").style.opacity = "1"
 		document.getElementById("scrollbar").style.opacity = "1"
+		document.getElementById("scrolltotop").style.cursor = "pointer";
 	}
 }
 

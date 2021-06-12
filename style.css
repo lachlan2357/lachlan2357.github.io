@@ -10,7 +10,9 @@
   --five: #65CDFA;
   
   --gradient: linear-gradient(to bottom right, var(--one), var(--two), var(--three), var(--four), var(--five));
-  --small-gradient: linear-gradient(to bottom right, var(--two), var(--three));
+  --small-gradient-purple: linear-gradient(to bottom right, var(--two), var(--three));
+  --small-gradient-blue: linear-gradient(to bottom right, var(--four), var(--five));
+  --white-gradient: linear-gradient(to bottom right, white, white)
 }
 
 * {
@@ -111,8 +113,14 @@ img.hero {
 	display: block;
 	margin: auto;
 	width: inherit;
-	height: inherit;
-	
+	height: inherit;	
+}
+
+img.pfp {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	box-shadow: 0px 0px 20px #444444;
 }
 
 h1.title {
@@ -123,6 +131,7 @@ h1.title {
 	text-align: center;
 	line-height: 1em;
 	cursor: default;
+	text-shadow: 0px 0px 20px #444444;
 }
 
 /* scrollbar */
@@ -152,7 +161,7 @@ h1.title {
 	border-radius: 50%;
 	border: none;
 	box-shadow: 0px 0px 10px #000000;
-	background: white;
+	background: var(--four);
 	z-index: 500;
 	opacity: 0;
 
@@ -161,7 +170,22 @@ h1.title {
 }
 
 #scrolltotop:hover {
-	background: var(--secondary);
+	background: white;
+	transition: 0.25s ease;
+}
+
+#scrolltotop:hover p {
+	color: var(--four);
+
+	transition: 0.25s ease;
+}
+
+#scrolltotop p {
+	text-align: center;
+	font-size: 2em;
+	padding-top: 5px;
+	color: white;
+
 	transition: 0.25s ease;
 }
 
@@ -177,6 +201,24 @@ h1.title {
 	box-shadow: 0px 0px 10px var(--boxShadow);
 	
 	transition: 0.25s ease;
+}
+
+#social-icons ul {
+	list-style-type: none;
+}
+
+.social-icon {
+	float: center;
+	display: inline-block;
+	font-size: 20px;
+	color: white;
+	padding: 5px;
+}
+
+.social-icon a {
+	text-decoration: none;
+	color: white;
+	filter: drop-shadow(0px 0px 5px black);
 }
 
 .column {
