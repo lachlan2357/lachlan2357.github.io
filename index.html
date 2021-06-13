@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
@@ -13,9 +13,9 @@
 <body onload="OnScroll()" onscroll="OnScroll()" onresize="OnScroll()" id="test">
 	<!-- navbar -->
 	<ul id="navbar">
-		<li><a class="navbar-item" href=""><i class="fa fa-home"></i></a></li>
+		<li><a class="navbar-item" href="#content"><i class="fa fa-id-badge"></i></a></li>
 		<li><a class="navbar-item" href=""><i class="fa fa-image"></i></a></li>
-		<li><a class="navbar-item" href=""><i class="fa fa-info"></i></a></li>
+		<li><a class="navbar-item" href=""><i class="far fa-envelope"></i></a></li>
 	</ul>
 
 	<!-- scrollbar -->
@@ -30,14 +30,9 @@
 	<!-- hero image -->
 	<div id="hero">
 		<div id="hero-text">
-			<img class="pfp" src="images/pfp.png"></img>
+			<img class="pfp" src="images/pfp.png" id="pfp"></img>
 
-			<br>
-			<br>
-			<br>
-
-
-			<h1 class="title" id="title">MY LITTLE <br> CORNER <br> OF THE <br> INTERNET</h1>
+			<h1 class="title" id="title">MY LITTLE<br>CORNER<br>OF THE<br>INTERNET</h1>
 
 			<div id="social-icons">
 				<ul>
@@ -49,8 +44,17 @@
 		</div>
 	</div>
 
-	<div class="container card">
-		<h2>Hey! Yeah, you. Come here...</h2>
+	<div id="scrollCaret">
+		<span id="scrollCaretSpan"><i class="fa fa-chevron-down"></i></span>
+	</div>
+
+	<div class="container card" id="content" ref="{myRef}">
+		<div class="header">
+			<h2>👋 Hey! Yeah, you. Come here...</h2>
+		</div>
+		<div class="footer">
+			<p>I get bored sometimes. So here is where I'm going to put it all.</p>
+		</div>
 	</div>
 
 

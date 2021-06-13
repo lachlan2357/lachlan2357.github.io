@@ -23,6 +23,7 @@ function OnScroll() {
 		document.getElementById("scrolltotop").style.opacity = "0"
 		document.getElementById("scrollbar").style.opacity = "0"
 		document.getElementById("scrolltotop").style.cursor = "default";
+		document.getElementById("scrollCaretSpan").style.opacity = "1";
 	} else {
 		document.getElementById("hero").style.borderRadius = "0px 0px 10px 10px";
 		document.getElementById("navbar").style.boxShadow = "0px 0px 5px #000000";
@@ -30,14 +31,20 @@ function OnScroll() {
 		document.getElementById("scrolltotop").style.opacity = "1"
 		document.getElementById("scrollbar").style.opacity = "1"
 		document.getElementById("scrolltotop").style.cursor = "pointer";
+		document.getElementById("scrollCaretSpan").style.opacity = "0";
 	}
 
 	var titleSize = Math.sqrt(3.2 * window.innerWidth);
 	document.getElementById("title").style.fontSize = String(titleSize) + "px";
+
+	var pfpSize = Math.pow(2000 * window.innerWidth, 1/3);
+	document.getElementById("pfp").style.width = String(pfpSize) + "px";
+	document.getElementById("pfp").style.height = String(pfpSize) + "px";
+	document.getElementById("pfp").style.marginBottom = String(pfpSize / 6) + "px";
 }
 
 function ScrollToTop() {
-	window.scrollTo({top: 0, behavior: 'smooth'});
+	window.scrollTo(0, 0);
 }
 
 function DarkLightMode() {

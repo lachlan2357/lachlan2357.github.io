@@ -2,6 +2,8 @@
   --background: #DDDDDD;
   --foreground: #FFFFFF;
   --boxShadow: #000000;
+  --boxShadowMed: #00000078;
+  --boxShadowLight: #00000033;
 
   --oneold: #C352FF;
   --twoold: #875CE6;
@@ -16,14 +18,15 @@
   --five: #69B6FA;
   
   --gradient: linear-gradient(to bottom right, var(--one), var(--two), var(--three), var(--four), var(--five));
+  --small-gradient: linear-gradient(to bottom right, var(--two), var(--four));
   --small-gradient-purple: linear-gradient(to bottom right, var(--two), var(--three));
   --small-gradient-blue: linear-gradient(to bottom right, var(--four), var(--five));
-  --white-gradient: linear-gradient(to bottom right, white, white)
 }
 
 * {
 	margin: 0;
     padding: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -31,6 +34,7 @@ html {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	background: var(--background);
+	scroll-behavior: smooth;
 
 	transition: 0.25s ease;
 }
@@ -68,6 +72,7 @@ body {
 /* navbar items */
 .navbar-item {
 	text-decoration: none;
+	font-size: 1.25em;
 	color: white;
 	padding: 15px 0px;
 	display: block;
@@ -122,6 +127,7 @@ img.hero {
 }
 
 img.pfp {
+	display: inline-block;
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
@@ -132,10 +138,14 @@ h1.title {
 	font-family: Biryani;
 	display: absolute;
 	color: white;
-	font-size: 80px;
 	text-align: center;
 	line-height: 1em;
 	cursor: default;
+	text-shadow: 0px 0px 20px #444444;
+}
+
+h2 {
+	font-family: Biryani;
 	text-shadow: 0px 0px 20px #444444;
 }
 
@@ -194,10 +204,44 @@ h1.title {
 	transition: 0.25s ease;
 }
 
+#scrollCaret {
+	position: absolute;
+	padding: 25px;
+	left: 50%;
+	font-size: 2em;
+	color: white;
+	transform: translateX(-50%);
+	top: calc(100vh - 100px);
+	animation: fadeAnimation 2s infinite;
+}
+
+#scrollCaret span {
+	transition: 0.25s ease;
+}
+
 .container {
-	margin: 20px 5%;
-	padding: 60px 20px;
-	width: 100vw - 100px;
+	margin: 20px auto;
+	padding: 50px 5em;
+	width: min(768px, 80%);
+}
+
+.card {
+	padding: 0px;
+}
+
+.card .header {
+	padding: 30px 20px 20px 20px;
+	background: var(--small-gradient);
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.card .footer {
+	padding: 25px 50px;
+	background: white;
+	background: white;
+	color: black;
+	border-radius: 0px 0px 10px 10px;
 }
 
 h2 {
@@ -208,7 +252,7 @@ h2 {
 .card {
 	background-color: var(--foreground);
 	border-radius: 10px;
-	box-shadow: 0px 0px 10px var(--boxShadow);
+	box-shadow: 0px 0px 50px var(--boxShadowLight);
 	
 	transition: 0.25s ease;
 }
@@ -256,6 +300,20 @@ h2 {
 	background: red;
 }
 
+@keyframes fadeAnimation {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @media only screen and (min-width: 768px) {
 	#navbar {
 		top: 10px;
@@ -272,7 +330,7 @@ h2 {
 		border-radius: 0px 10px 10px 0px;
 	}
 
-	#navbar li:first-child:last-child a {
+	#navbar li:only-child a {
 		border-radius: 10px 10px 10px 10px;
 	}
 }
