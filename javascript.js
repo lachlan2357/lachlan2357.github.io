@@ -1,6 +1,17 @@
 var darkmode = false;
 
-function OnScroll() {
+function OnLoad() {
+	UpdateCSS();
+	window.scrollTo(0, 0);
+
+	var cover = document.getElementById("cover");
+	cover.style.opacity = "0";
+	setTimeout(() => {  cover.remove(); }, 3000);
+
+	window.scrollTo(0,0);
+}
+
+function UpdateCSS() {
 	/* scrollbar */
 	var bodyHeight = document.getElementById("test").offsetHeight;
 	var viewportHeight = window.innerHeight;
@@ -18,7 +29,7 @@ function OnScroll() {
 
 	if (scrolledHeight == 0) {
 		document.getElementById("hero").style.borderRadius = "0px";
-		document.getElementById("navbar").style.boxShadow = "0px 0px 0px #000000";
+		document.getElementById("navbar").style.boxShadow = "0px 0px 0px var(--boxShadowMed)";
 		document.getElementById("navbar").style.background = "transparent";
 		document.getElementById("scrolltotop").style.opacity = "0"
 		document.getElementById("scrollbar").style.opacity = "0"
@@ -26,7 +37,7 @@ function OnScroll() {
 		document.getElementById("scrollCaretSpan").style.opacity = "1";
 	} else {
 		document.getElementById("hero").style.borderRadius = "0px 0px 10px 10px";
-		document.getElementById("navbar").style.boxShadow = "0px 0px 5px #000000";
+		document.getElementById("navbar").style.boxShadow = "0px 0px 10px var(--boxShadowMed)";
 		document.getElementById("navbar").style.background = "var(--small-gradient-purple)";
 		document.getElementById("scrolltotop").style.opacity = "1"
 		document.getElementById("scrollbar").style.opacity = "1"
@@ -51,13 +62,13 @@ function DarkLightMode() {
 	if (darkmode) {
 		document.documentElement.style.setProperty("--background", "#DDDDDD")
 		document.documentElement.style.setProperty("--foreground", "#EEEEEE")
-		document.documentElement.style.setProperty("--boxShadow", "#000000")
+		document.documentElement.style.setProperty("--text", "#000000")
 	
 		darkmode = false;
 	} else {
 		document.documentElement.style.setProperty("--background", "#222222")
 		document.documentElement.style.setProperty("--foreground", "#111111")
-		document.documentElement.style.setProperty("--boxShadow", "#FFFFFF")
+		document.documentElement.style.setProperty("--text", "#FFFFFF")
 
 		darkmode = true;
 	}

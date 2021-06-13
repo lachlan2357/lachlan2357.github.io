@@ -1,6 +1,7 @@
 :root {
   --background: #DDDDDD;
   --foreground: #FFFFFF;
+  --text: #000000;
   --boxShadow: #000000;
   --boxShadowMed: #00000078;
   --boxShadowLight: #00000033;
@@ -23,6 +24,17 @@
   --small-gradient-blue: linear-gradient(to bottom right, var(--four), var(--five));
 }
 
+#cover {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: black;
+	z-index: 1000000;
+
+	transition: 2s ease;
+	transition-delay: 1s; 
+}
+
 * {
 	margin: 0;
     padding: 0;
@@ -34,9 +46,10 @@ html {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	background: var(--background);
+	color: var(--text);
 	scroll-behavior: smooth;
 
-	transition: 0.25s ease;
+	transition: 0.25s;
 }
 
 html::-webkit-scrollbar {
@@ -53,15 +66,12 @@ body {
 	width: 100%;
 	left: 50%;
 	top: 0px;
-	background: transparent;
 	transform: translateX(-50%);
 	position: fixed;
 	text-align: center;
-	border-radius: 0px;
-	box-shadow: 0px;
 	z-index: 500;
 
-	transition: 0.25s ease;
+	transition: 0.25s;
 }
 
 #navbar li {
@@ -73,18 +83,23 @@ body {
 .navbar-item {
 	text-decoration: none;
 	font-size: 1.25em;
-	color: white;
 	padding: 15px 0px;
 	display: block;
 
-	transition: 0.25s ease;
+	transition: 0.25s;
+}
+
+#navbar li a {
+	color: #FFFFFF;
+
+	transition: 0.25s;
 }
 
 #navbar li a:hover {
 	background: var(--foreground);
 	color: var(--two);
 
-	transition: 0.25s ease;
+	transition: 0.25s;
 }
 
 #navbar li:first-child a {
@@ -99,7 +114,7 @@ body {
 	border-radius: 10px;
 }
 
-div#hero {
+#hero {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -111,42 +126,29 @@ div#hero {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0px 0px 20px #000000;
-	border-radius: 0px;
+	box-shadow: 0px 0px 20px var(--boxShadow);
 }
 
-div#hero-text {
+#hero-text {
 	width: 95%;
 }
 
-img.hero {
-	display: block;
-	margin: auto;
-	width: inherit;
-	height: inherit;	
-}
-
-img.pfp {
+#pfp {
 	display: inline-block;
 	border-radius: 50%;
-	width: 150px;
-	height: 150px;
 	box-shadow: 0px 0px 20px #444444;
 }
 
-h1.title {
+h1, h2, h3, h4, h5, h6 {
 	font-family: Biryani;
-	display: absolute;
+	text-shadow: 0px 0px 20px #444444;
+}
+
+#title {
 	color: white;
 	text-align: center;
 	line-height: 1em;
 	cursor: default;
-	text-shadow: 0px 0px 20px #444444;
-}
-
-h2 {
-	font-family: Biryani;
-	text-shadow: 0px 0px 20px #444444;
 }
 
 /* scrollbar */
@@ -159,10 +161,10 @@ h2 {
 	top: 0px;
 	right: 5px;
 	border-radius: 5px;
-	box-shadow: 0px 0px 10px #000000;
+	box-shadow: 0px 0px 10px var(--boxShadow);
 	z-index: 1000;
 
-	transition: opacity 0.25s ease;
+	transition: opacity 0.25s;
 }
 
 /* scroll to top button */
@@ -175,24 +177,19 @@ h2 {
 	right: 25px;
 	border-radius: 50%;
 	border: none;
-	box-shadow: 0px 0px 10px #000000;
+	box-shadow: 0px 0px 10px var(--boxShadow);
 	background: var(--four);
 	z-index: 500;
 	opacity: 0;
-
 	cursor: pointer;
-	transition: 0.25s ease;
+
+	transition: 0.25s;
 }
 
 #scrolltotop:hover {
 	background: white;
-	transition: 0.25s ease;
-}
 
-#scrolltotop:hover p {
-	color: var(--four);
-
-	transition: 0.25s ease;
+	transition: 0.25s;
 }
 
 #scrolltotop p {
@@ -201,7 +198,13 @@ h2 {
 	padding-top: 5px;
 	color: white;
 
-	transition: 0.25s ease;
+	transition: 0.25s;
+}
+
+#scrolltotop:hover p {
+	color: var(--four);
+
+	transition: 0.25s;
 }
 
 #scrollCaret {
@@ -216,45 +219,36 @@ h2 {
 }
 
 #scrollCaret span {
-	transition: 0.25s ease;
+	transition: 0.25s;
 }
 
 .container {
 	margin: 20px auto;
-	padding: 50px 5em;
 	width: min(768px, 80%);
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px var(--boxShadowLight);
 }
 
-.card {
-	padding: 0px;
-}
-
-.card .header {
+.header {
 	padding: 30px 20px 20px 20px;
 	background: var(--small-gradient);
 	color: white;
 	border-radius: 10px 10px 0px 0px;
+
+	transition: 0.25s;
 }
 
-.card .footer {
+.footer {
 	padding: 25px 50px;
-	background: white;
-	background: white;
-	color: black;
+	background: var(--foreground);
 	border-radius: 0px 0px 10px 10px;
+
+	transition: 0.25s;
 }
 
 h2 {
 	text-align: center;
 	font-size: 36px;
-}
-
-.card {
-	background-color: var(--foreground);
-	border-radius: 10px;
-	box-shadow: 0px 0px 50px var(--boxShadowLight);
-	
-	transition: 0.25s ease;
 }
 
 #social-icons ul {
