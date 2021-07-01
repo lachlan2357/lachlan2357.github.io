@@ -16,9 +16,9 @@
 
 	<!-- navbar -->
 	<ul id="navbar">
-		<li><a class="navbar-item" href="#content"><i class="fa fa-id-badge"></i></a></li>
-		<li><a class="navbar-item" href=""><i class="fa fa-image"></i></a></li>
-		<li><a class="navbar-item" href=""><i class="far fa-envelope"></i></a></li>
+		<li><a class="navbar-item"><i class="fa fa-id-badge"></i></a></li>
+		<li><a class="navbar-item" onclick="ScrollTo('projects')"><i class="fa fa-image"></i></a></li>
+		<li><a class="navbar-item" href="#"><i class="far fa-envelope"></i></a></li>
 	</ul>
 
 	<!-- scrollbar -->
@@ -31,7 +31,7 @@
 	</div>
 
 	<!-- hero image -->
-	<div id="hero" onclick="DarkLightMode()">
+	<div id="hero">
 		<div id="hero-text">
 			<img id="pfp" src="images/pfp.png"></img>
 
@@ -39,9 +39,9 @@
 
 			<div id="social-icons">
 				<ul>
-					<li class="social-icon"><a href="https://www.instagram.com/lachlan_2357"><i class="fab fa-instagram"></i></a></li>
-					<li class="social-icon"><a href="https://github.com/lachlan2357"><i class="fa fa-github"></i></a></li>
-					<li class="social-icon"><a href="mailto:lachlan.rehder@outlook.com"><i class="far fa-envelope"></i></a></li>
+					<li class="social-icon"><a href="https://www.instagram.com/lachlan_2357" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+					<li class="social-icon"><a href="https://github.com/lachlan2357" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+					<li class="social-icon"><a href="mailto:lachlan.rehder@outlook.com" target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -53,8 +53,8 @@
 
 	<!-- content -->
 
-	<div class="container" id="content">
-		<div class="header">
+	<div class="container card" id="content">
+		<div class="header gradient-small">
 			<h2>👋 Hey! Yeah, you. Come here...</h2>
 		</div>
 		<div class="footer">
@@ -62,6 +62,13 @@
 		</div>
 	</div>
 
+	<h1 id="projects">Past Projects</h1>
 
+	<div class="container container-large" id="pastProjects">
+		<script>DisplayPastProjects()</script> 
+	</div>
+
+	<div id="popup-zone">
+	</div>
 </body>
-	
+</html>

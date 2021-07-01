@@ -22,17 +22,58 @@
   --small-gradient: linear-gradient(to bottom right, var(--two), var(--four));
   --small-gradient-purple: linear-gradient(to bottom right, var(--two), var(--three));
   --small-gradient-blue: linear-gradient(to bottom right, var(--four), var(--five));
+
+  --gradient-amsi-three: linear-gradient(to bottom right, #171c47, #8b2370);
+  --gradient-amsi-two: linear-gradient(to bottom right, #fdbc20, #fb7004);
+  --gradient-amsi-one: linear-gradient(to bottom right, #5ac0aa, #03b4bc);
+
+  --gradient-f1: linear-gradient(to bottom right, #F22E0C, #DB0101);
 }
 
-#cover {
+
+#popup-zone {
 	position: fixed;
+	top: 0px;
+	left: 0px;
 	width: 100vw;
 	height: 100vh;
-	background: black;
-	z-index: 1000000;
+	opacity: 0;
+	z-index: 5000;
 
-	transition: 2s ease;
-	transition-delay: 1s; 
+	pointer-events: none;
+}
+
+.popup-close {
+	background: var(--background);
+	opacity: 0.5;
+	width: 100vw;
+	height: 100vh;
+}
+
+.popup {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 75vw;
+	height: 75vh;
+
+	transition: 0.25s ease;
+}
+
+.popupDiv {
+	transition: 0.25s ease;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.popupDiv::-webkit-scrollbar {
+	display: none;
+}
+
+iframe {
+	
+	border-radius: 10px;
+	border: none;
 }
 
 * {
@@ -58,6 +99,11 @@ html::-webkit-scrollbar {
 
 body {
 	width: 100vw;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
 }
 
 /* navbar */
@@ -137,11 +183,29 @@ body {
 	display: inline-block;
 	border-radius: 50%;
 	box-shadow: 0px 0px 20px #444444;
+	width: 0px;
+	height: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Biryani;
 	text-shadow: 0px 0px 20px #444444;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+.text-gradient {
+	background: -webkit-linear-gradient(var(--one), var(--two), var(--three), var(--four), var(--five));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: border-box;
 }
 
 #title {
@@ -163,6 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px var(--boxShadow);
 	z-index: 1000;
+	background-color: var(--foreground);
 
 	transition: opacity 0.25s;
 }
@@ -195,7 +260,6 @@ h1, h2, h3, h4, h5, h6 {
 #scrolltotop p {
 	text-align: center;
 	font-size: 2em;
-	padding-top: 5px;
 	color: white;
 
 	transition: 0.25s;
@@ -222,24 +286,87 @@ h1, h2, h3, h4, h5, h6 {
 	transition: 0.25s;
 }
 
+.card {
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px var(--boxShadowMed);
+	background: var(--foreground);
+
+	transition: 0.25s ease;
+}
+
+.card-hover {
+	box-shadow: none;
+}
+
+.card-hover:hover {
+	box-shadow: 0px 0px 20px var(--boxShadowMed);
+	transform: scale(1.05);
+	cursor: pointer;
+
+	transition: 0.25s ease;
+}
+
 .container {
 	margin: 20px auto;
 	width: min(768px, 80%);
-	border-radius: 10px;
-	box-shadow: 0px 0px 20px var(--boxShadowLight);
+}
+
+.container-large {
+	display: flex;
+	width: 95%;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+	transition: 0.25s ease;
 }
 
 .header {
 	padding: 30px 20px 20px 20px;
-	background: var(--small-gradient);
-	color: white;
+	color: #FFFFFF;
 	border-radius: 10px 10px 0px 0px;
+	text-align: center;
 
 	transition: 0.25s;
 }
 
+.make-white {
+	filter: invert(100%) brightness(116%);
+	mix-blend-mode: screen;
+	margin: auto;
+	height: 150px;
+	display: block;
+}
+
+.gradient-small-blue {
+	background: var(--small-gradient-blue);
+}
+
+.gradient-small-purple {
+	background: var(--small-gradient-purple)
+}
+
+.gradient-small {
+	background: var(--small-gradient);
+}
+
+.gradient-amsi-three {
+	background: var(--gradient-amsi-three);
+}
+
+.gradient-amsi-two {
+	background: var(--gradient-amsi-two);
+}
+
+.gradient-amsi-one {
+	background: var(--gradient-amsi-one);
+}
+
+.gradient-f1 {
+	background: var(--gradient-f1);
+}
+
 .footer {
-	padding: 25px 50px;
+	padding: 25px 5%;
 	background: var(--foreground);
 	border-radius: 0px 0px 10px 10px;
 
@@ -256,7 +383,6 @@ h2 {
 }
 
 .social-icon {
-	float: center;
 	display: inline-block;
 	font-size: 20px;
 	color: white;
@@ -270,8 +396,11 @@ h2 {
 }
 
 .column {
-	height: 100%;
-	display: inline-block;
+	flex: 0 0;
+	flex-direction: column;
+	margin: 10px;
+
+	transition: 0.25s ease;
 }
 
 .col-1 {
@@ -283,11 +412,11 @@ h2 {
 }
 
 .col-3 {
-	width: calc(100%/3);
+	flex-basis: 30%;
 }
 
 .col-4 {
-	width: 25%;
+	flex-basis: 75%;
 }
 
 .red {
@@ -326,5 +455,31 @@ h2 {
 
 	#navbar li:only-child a {
 		border-radius: 10px 10px 10px 10px;
+	}
+
+	.col-4 {
+		flex-basis: 40%;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.col-4 {
+		flex-basis: 25%;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+		--background: #DDDDDD;
+		--foreground: #EEEEEE;
+		--text: #000000;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+		--background: #111111;
+		--foreground: #222222;
+		--text: #EEEEEE;
 	}
 }
