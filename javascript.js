@@ -1,4 +1,4 @@
-const pastProjects = {
+/*const pastProjects = {
 	"amsi": ["gradient-amsi-three", "fas fa-film", "AMSI ChooseMATHS Competition", "Throughout 2017, 2018 and 2019, myself and a group of friends competed in the AMSI ChooseMATHS Competition. While not doing very well early on, our final video submission in 2019 was selected as one of the Top 10 nationally.", `
 	<div class="container container-large" style="display: flex; justify-contents: space-evenly; width: 100%;">
 		<div class="card column col-4">
@@ -56,7 +56,7 @@ const pastProjects = {
 			</div>
 		</div>
 	</div>`]
-}
+}*/
 
 function OnLoad() {
 	UpdateCSS();
@@ -128,7 +128,7 @@ function DisplayPastProjects() {
 		console.log(content);
 
 		pastProjectsElement.innerHTML += `
-			<a onmouseover="PopupHover('${ids[i]}')" onclick="Popup('${ids[i]}')" class="column col-4 card card-hover" id="${ids[i]}">
+			<a onmouseover="PopupHover('${ids[i]}')" onclick="Popup('${ids[i]}')" class="column col-4 card card-hover hide" id="${ids[i]}">
 				<div class="header ${content[0]}">
 					<i class="${content[1]} fa-9x"></i>
 				</div>
