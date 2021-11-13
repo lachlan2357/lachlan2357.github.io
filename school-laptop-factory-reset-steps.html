@@ -53,7 +53,7 @@
         <!-- Issue 2 -->
 
         <h3 class="h3"><span class="gradient-underline">Issue 2: Unactivated Windows</span></h3>
-        <p>The easiest way to check if you have this issue is to head over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a> and find where it says near the top "Activation" followed by either an error message or the text "Windows is activated ...". If your laptop says Windows is activated, then you have no issue, but if it says Windows is not activated, or it cannot find a product key. The issue with this is that IT has given us all the same product key, so only one person can use the key. As I was the first to activate my Windows, I have that product key activated, but nobody else can use it. As of right now, you essentially have two options:</p>
+        <p>The easiest way to check if you have this issue is to head over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a> and find where it says near the top "Activation" followed by either an error message or the text "Windows is activated ...". If your laptop says Windows is activated, then you have no issue, but if it says Windows is not activated, or it cannot find a product key. The issue with this is that IT has given us all the same product key, so only one person can use the key. As I was the first to activate my Windows, I have that product key activated, but nobody else can use it. As of right now, you essentially have three options:</p>
         
         <h4 class="h4"><span class="gradient-underline">Fix 1: Use your original product key</span></h4>
         <p>Originally, our laptops came with Windows 10 Pro Education, which is very similar to Windows 10 Pro, but with a few changes. I'm not 100% sure of all the implications of using this version of Windows over regular Windows 10 Pro, however from what I have seen, you probably won't notice a difference between the two versions. Before taking these steps, I recommend having a look into Windows 10 Pro Education and seeing if there is anything that you do not want.</p>
@@ -63,7 +63,7 @@
         <p>Copy and paste the below line of code into the Powershell window that has just popped up and press enter</p>
         <code class="card">wmic path softwarelicensingservice get OA3xOriginalProductKey</code>
         <h5 class="h5">Step 3 - Copy the product key that it displays</h5>
-        <p>On the line below where you pasted the code into, there should now be a product code with 25 characters separated by dashes in the format of:</p>
+        <p>On the line or two below where you pasted the code into, there should now be a product code with 25 characters separated by dashes in the format of:</p>
         <code class="card">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>
         <p>Highlight this text and copy it. Powershell is weird, so to copy it, you need to highlight it and press the "Enter" key.</p>
         <h5 class="h5">Step 4 - Activate Windows with this new product key</h5>
@@ -71,6 +71,9 @@
 
         <h4 class="h4"><span class="gradient-underline">Fix 2: Purchase a new product key</span></h4>
         <p><span class="danger">I strongly recommend not doing this</span> as Windows 10 is quite expensive to buy. However, the process to activate Windows with a purchased product key is the same as the previous solution. So, if you do wish to purchase a new copy of Windows, then once you have the new product key, follow the steps that comes with it, or if there are none, follow the previous fix from Step 4.</p>
+
+        <h4 class="h4"><span class="gradient-underline">Fix 3: Wait</span></h4>
+        <p>Hopefully I can speak to IT about this issue further before we graduate and see if there is anything else that can be done to get all of you with the proper version of Windows. I have no idea whether or not anything can be done, but I'm going to try. When I know more, I'll update this page. Please keep in mind, however, that if you leave Windows unactivated for too long, you may begin to face issues with using your computer. If something does happen that restricts your usage of your laptop, consider one of the other options. If you do proceed with Fix 1, you should be able to change your product key and edition of Windows if a better fix comes out later down the track.</p>
         <!--<h4 class="h4"><span class="gradient-underline">To Fix:</span></h4>
         <h5 class="h5">Step 1 - Confirm which version of Windows you are running</h5>
         <p>Above where you read about status of Windows Activation, it will state your edition of Windows. Mine, like in the screenshot here, says "Windows 10 Pro", but it is likely that you are running "Windows 10 Home".</p>
