@@ -58,13 +58,28 @@
 	</div>`]
 }*/
 
+const guides = {
+	" windowsupdate": {
+		"icon": "fa fa-windows",
+		"title": "Updating Windows on Ex-School Laptops",
+		"description": "After getting our laptops back from the school, I quickly realised they messed up the install for it. So I created this guide to help the rest of the grade update theirs."
+	}
+}
+
+function DisplayGuides() {
+	for(var i = 0; i < Object.keys(guides).length; i++){
+		var guide = guides[Object.keys(guides)[i]]
+		var parent = document.getElementById("guides-carousel");
+		parent.innerHTML += `<div class="guide">
+		<h3 class="h5">${guide.title}</h1>
+		<p>${guide.description}</p>
+		</div>
+		`;
+	}
+}
+
 function OnLoad() {
 	UpdateCSS();
-	
-
-	var cover = document.getElementById("cover");
-	cover.style.opacity = "0";
-	setTimeout(() => {  cover.remove(); }, 3000);
 }
 
 function UpdateCSS() {
@@ -107,7 +122,7 @@ function UpdateCSS() {
 	var pfpSize = Math.pow(2000 * window.innerWidth, 1/3);
 	document.getElementById("pfp").style.width = String(pfpSize) + "px";
 	document.getElementById("pfp").style.height = String(pfpSize) + "px";
-	document.getElementById("pfp").style.marginBottom = String(pfpSize / 6) + "px";
+	//document.getElementById("pfp").style.marginBottom = String(pfpSize / 6) + "px";
 }
 
 function ScrollTo(id) {

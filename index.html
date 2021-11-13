@@ -8,12 +8,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@800&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/d7146fbe0f.js" crossorigin="anonymous"></script>
 	<script src="javascript.js"></script>
-	<link rel="shortcut icon" type="image/png" href="images/pfp.png">
+	<link rel="shortcut icon" type="image/png" href="images/pfp-circle.png">
 	<title>My Little Corner of the Internet</title>
 </head>
 <body onload="OnLoad()" onscroll="UpdateCSS()" onresize="UpdateCSS()" id="test">
-	<div id="cover">
-	</div>
 
 	<!-- navbar -->
 	<ul id="navbar">
@@ -36,7 +34,7 @@
 		<div id="hero-text">
 			<img id="pfp" src="images/pfp.png"></img>
 
-			<h1 id="title">MY LITTLE<br>CORNER<br>OF THE<br>INTERNET</h1>
+			<h1 class="h1" id="title">MY LITTLE<br>CORNER<br>OF THE<br>INTERNET</h1>
 
 			<div id="social-icons">
 				<ul>
@@ -53,23 +51,29 @@
 	</div>
 
 	<!-- content -->
+	<div class="container">
+		<!-- welcome -->
+		<div class="container card" id="content">
+			<div class="header gradient-small">
+				<h2 class="h2">Welcome!</h2>
+			</div>
+			<div class="footer">
+				<p>I get bored sometimes. So here is where I'm going to put it all. It's a bit empty at the moment because this is a big work in progress.</p>
+			</div>
+		</div>
 
-	<div class="container card" id="content">
-		<div class="header gradient-small">
-			<h2>👋 Hey! Yeah, you. Come here...</h2>
-		</div>
-		<div class="footer">
-			<p>I get bored sometimes. So here is where I'm going to put it all. It's a bit empty at the moment because this is a big work in progress.</p>
-		</div>
-	</div>
+		<!-- guides -->
+
 
 	<!--<h1 id="projects">Past Projects</h1>-->
 
-	<div class="container container-large" id="pastProjects">
+	<!--<div class="container container-large" id="pastProjects">
 		<script>DisplayPastProjects()</script> 
-	</div>
+	</div>-->
 
-	<div id="popup-zone">
-	</div>
+	<!--<div id="popup-zone">
+	</div>-->
+
+	<script>DisplayGuides()</script>
 </body>
 </html>

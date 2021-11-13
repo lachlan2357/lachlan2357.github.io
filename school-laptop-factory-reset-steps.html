@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="text.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Fira+Code&family=Montserrat:wght@800&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/d7146fbe0f.js" crossorigin="anonymous"></script>
 	<script src="javascript.js"></script>
-	<link rel="shortcut icon" type="image/png" href="images/pfp.png">
+	<link rel="shortcut icon" type="image/png" href="images/pfp-circle.png">
 	<title>My Little Corner of the Internet</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
 		<div id="hero-text">
 			<img id="pfp" src="images/pfp.png"></img>
 
-			<h1 id="title" class="title-left">THE SCHOOL<br>SORT OF<br>MESSED UP...</h1>
+			<h1 id="title" class="h1 title-left">THE SCHOOL<br>SORT OF<br>MESSED UP...</h1>
 
 			<div id="social-icons">
 				<ul>
@@ -34,50 +34,67 @@
         
         <!-- Issue 1 -->
         
-        <h3><span class="gradient-underline">Issue 1: A very old Windows</span></h3>
+        <h3 class="h3"><span class="gradient-underline">Issue 1: A very old Windows</span></h3>
         <p>The school may have, like they did for me, flashed a very old image of Windows onto your laptop, so old that not even Windows update can get you up to date. Head over to <a href="ms-settings:windowsupdate" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Windows Update</a> and click "Check for Updates" to see if Windows can bring you up to date. Then, once Windows Update says you're up to date, head over to <a href="ms-settings:about" class="bold gradient-underline-small">Settings &rarr; System &rarr; About</a>, scroll down to "Windows Specifications" and find where it says "Version". If the four digit code begins with a "21" or above, you're most likely up to date. If the code begins with "20" or less (it most likely says "1511"), then follow the steps below.</p>
-        <h4><span class="gradient-underline">To Fix:</span></h4>
-        <h5>Step 1 - Download the Windows 10 Update Assistant</h5>
+        <h4 class="h4"><span class="gradient-underline">To Fix:</span></h4>
+        <h5 class="h5">Step 1 - Download the Windows 10 Update Assistant</h5>
         <p>Head over to <a href="https://www.microsoft.com/en-au/software-download/windows10">https://www.microsoft.com/en-au/software-download/windows10</a> and click the blue "Update Now" button to download the tool.</a></p>
-        <img src="step1.png"/>
-        <h5>Step 2 - Click on the downloaded file to run it</h5>
+        <img src="images/factory-reset-images/step1.png"/>
+        <h5 class="h5">Step 2 - Click on the downloaded file to run it</h5>
         <p>The assistant will open a window that you will need to work though. Before proceeding, however, make sure your laptop is plugged in and charging; depending on your internet speed this may take a while. Then, continue through the assistant and it should begin downloading and then installing the latest version of Windows.</p>
-        <h5>Step 3 - Restart</h5>
+        <h5 class="h5">Step 3 - Restart</h5>
         <p>When the installation is complete, Windows will ask you to restart. It may do so automatically in 30 minutes if left unattended, however it is best if you manually restart to make sure everything is running smoothly</p>
-        <h5>Step 4 - Verify you're up to date</h5>
+        <h5 class="h5">Step 4 - Verify you're up to date</h5>
         <p>After your laptop boots back into Windows, check that you are on the latest version. Head over to <a href="ms-settings:about" class="bold gradient-underline-small">Settings &rarr; System &rarr; About</a> and scroll down to Windows Specifications. Find where it says Version, which should start with "21" or higher. Mine below says "21H1", but yours may be newer, either "21H2" or a code beginning with a higher number. If this is not the case, you're laptop may still not be up to date.</p>
-        <img src="step4.png" class="small"/>
-        <h5>Step 5 - Check for final Windows Updates</h5>
+        <img src="images/factory-reset-images/step4.png" class="small"/>
+        <h5 class="h5">Step 5 - Check for final Windows Updates</h5>
         <p>Now that you're on a much newer Windows version, there may be some final updates which need to be done. Head over to <a href="ms-settings:windowsupdate" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Windows Update</a> and "Check for Updates". These updates may take a while to install and may require another restart.</p>
 
         <!-- Issue 2 -->
 
-        <h3><span class="gradient-underline">Issue 2: Unactivated Windows</span></h3>
-        <p>The easiest way to check if you have this issue is to head over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a> and find where it says near the top "Activation" followed by either an error message or the text "Windows is activated ...". If your laptop says Windows is activated, then you have no issue, but if it says Windows is not activated, or it cannot find a product key, then you may need to follow these steps.</p>
-        <h4><span class="gradient-underline">To Fix:</span></h4>
-        <h5>Step 1 - Confirm which version of Windows you are running</h5>
+        <h3 class="h3"><span class="gradient-underline">Issue 2: Unactivated Windows</span></h3>
+        <p>The easiest way to check if you have this issue is to head over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a> and find where it says near the top "Activation" followed by either an error message or the text "Windows is activated ...". If your laptop says Windows is activated, then you have no issue, but if it says Windows is not activated, or it cannot find a product key. The issue with this is that IT has given us all the same product key, so only one person can use the key. As I was the first to activate my Windows, I have that product key activated, but nobody else can use it. As of right now, you essentially have two options:</p>
+        
+        <h4 class="h4"><span class="gradient-underline">Fix 1: Use your original product key</span></h4>
+        <p>Originally, our laptops came with Windows 10 Pro Education, which is very similar to Windows 10 Pro, but with a few changes. I'm not 100% sure of all the implications of using this version of Windows over regular Windows 10 Pro, however from what I have seen, you probably won't notice a difference between the two versions. Before taking these steps, I recommend having a look into Windows 10 Pro Education and seeing if there is anything that you do not want.</p>
+        <h5 class="h5">Step 1 - Find your product key</h5>
+        <p>Laptops store their original product key somewhere on the computer itself, rather than in software, so no matter what happens, you can always have an activated version of Windows. To find this, firstly open <i>Powershell</i> as Administrator. This can be done by right clicking on the start menu button in the bottom right of your screen and selecting "Windows Powershell (Admin)" from the list. When the popup box appears, select "Yes".</p>
+        <h5 class="h5">Step 2 - Run a script to get your original product key</h5>
+        <p>Copy and paste the below line of code into the Powershell window that has just popped up and press enter</p>
+        <code class="card">wmic path softwarelicensingservice get OA3xOriginalProductKey</code>
+        <h5 class="h5">Step 3 - Copy the product key that it displays</h5>
+        <p>On the line below where you pasted the code into, there should now be a product code with 25 characters separated by dashes in the format of:</p>
+        <code class="card">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>
+        <p>Highlight this text and copy it. Powershell is weird, so to copy it, you need to highlight it and press the "Enter" key.</p>
+        <h5 class="h5">Step 4 - Activate Windows with this new product key</h5>
+        <p>Head over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a> and find near the bottom of the page where it says to "Change Product Key". Click the button, and when asked, paste your new product key into the box. Then continue through the process. Afterwards, Windows may need to restart or do some updates.</p>
+
+        <h4 class="h4"><span class="gradient-underline">Fix 2: Purchase a new product key</span></h4>
+        <p><span class="danger">I strongly recommend not doing this</span> as Windows 10 is quite expensive to buy. However, the process to activate Windows with a purchased product key is the same as the previous solution. So, if you do wish to purchase a new copy of Windows, then once you have the new product key, follow the steps that comes with it, or if there are none, follow the previous fix from Step 4.</p>
+        <!--<h4 class="h4"><span class="gradient-underline">To Fix:</span></h4>
+        <h5 class="h5">Step 1 - Confirm which version of Windows you are running</h5>
         <p>Above where you read about status of Windows Activation, it will state your edition of Windows. Mine, like in the screenshot here, says "Windows 10 Pro", but it is likely that you are running "Windows 10 Home".</p>
-        <img src="2step1.png" class="small">
-        <h5>Step 2 - Run the Activation Troubleshooter</h5>
+        <img src="images/factory-reset-images/2step1.png" class="small">
+        <h5 class="h5">Step 2 - Run the Activation Troubleshooter</h5>
         <p>If you are running Windows 10 Home, look down further on the page where you can run an Activation Troubleshooter. Click on the button to run the troubleshooter.</p>
-        <h5>Step 3 - Update Windows if required</h5>
+        <h5 class="h5">Step 3 - Update Windows if required</h5>
         <p>Going through the troubleshooter, if it's verdict is something along the lines of "Your Product Key is for a different edition of Windows", more specifically, for Windows 10 Pro, it should give you an option to Upgrade to Windows 10 Pro. Click the button, and once it is complete Adding Features, restard.</p>
-        <h5>Step 4 - Restart</h5>
-        <p>Upon restarting, head back over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a>, and it should now say something along the lines of "Windows is activated ...". If Windows still isn't activated, you may have further issues with your Windows install or product key that need addressing.</p>
+        <h5 class="h5">Step 4 - Restart</h5>
+        <p>Upon restarting, head back over to <a href="ms-settings:activation" class="bold gradient-underline-small">Settings &rarr; Update & Security &rarr; Activation</a>, and it should now say something along the lines of "Windows is activated ...". If Windows still isn't activated, you may have further issues with your Windows install or product key that need addressing.</p>-->
         
         <!-- Summary -->
-        <h3><span class="gradient-underline">Summary</span></h3>
+        <h3 class="h3"><span class="gradient-underline">Summary</span></h3>
         <p>So there you go, if there are any issues you run into in the process, or there is something else wrong with your Windows install, feel free to contact me. Places where you can contact me are below:</p>
 
         <div class="container card" id="content">
             <div class="header gradient-small">
-                <h2>Get in Contact</h2>
+                <h2 class="h2">Get in Contact</h2>
             </div>
             <div class="footer container container-large" style="align-items: center;">
                 <p>You can find me all over the place, but where I'm most likely to see your message are:</p>
 
-                <div class="half"><h4 class="center"><a class="hide" href="https://www.instagram.com/lachlan_2357"><i class="fa fa-instagram"></i><br><span class="gradient-underline">Instagram</span></h4></div>
-                <div class="half"><h4 class="center"><a class="hide" href="mailto:lachlan.rehder@outlook.com"><i class="far fa-envelope"></i><br><span class="gradient-underline">Email</span></h4></div>
+                <div class="half"><h4 class="h4 center"><a class="hide" href="https://www.instagram.com/lachlan_2357"><i class="fa fa-instagram"></i><br><span class="gradient-underline">Instagram</span></h4></div>
+                <div class="half"><h4 class="h4 center"><a class="hide" href="mailto:lachlan.rehder@outlook.com"><i class="far fa-envelope"></i><br><span class="gradient-underline">Email</span></h4></div>
             </div>
         </div>
     </div>

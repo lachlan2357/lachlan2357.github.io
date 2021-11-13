@@ -7,12 +7,6 @@
 	--boxShadowMed: #00000078;
 	--boxShadowLight: #00000033;
   
-	--oneold: #C352FF;
-	--twoold: #875CE6;
-	--threeold: #696EFA;
-	--fourold: #5C8EE6;
-	--fiveold: #65CDFA;
-  
 	--one: #F159FF;
 	--two: #AA60E6;
 	--three: #876EFA;
@@ -36,15 +30,16 @@
 	margin: 0;
     padding: 0;
 	box-sizing: border-box;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
 }
 
 html {
 	font-family: Roboto;
-	scrollbar-width: none;
-	-ms-overflow-style: none;
+
 	background: var(--background);
 	color: var(--text);
-	scroll-behavior: smooth;
 
 	transition: 0.25s;
 }
@@ -55,12 +50,6 @@ html::-webkit-scrollbar {
 
 body {
 	width: 100vw;
-}
-
-iframe {
-	
-	border-radius: 10px;
-	border: none;
 }
 
 img {
@@ -74,6 +63,11 @@ img {
 
 img.small {
 	width: 60%;
+}
+
+iframe {	
+	border-radius: 10px;
+	border: none;
 }
 
 /* popup */
@@ -177,7 +171,7 @@ img.small {
 	justify-content: center;
 	flex-direction: column;
 	width: 100vw;
-	height: 100vh;
+	height: max(100vh, 600px);
 	text-align: center;
 	background-image: var(--gradient);
 	background-position: center;
@@ -207,6 +201,7 @@ img.small {
 	box-shadow: 0px 0px 20px #444444;
 	width: 0px;
 	height: 0px;
+	margin: 0px;
 }
 
 .text-gradient {
@@ -221,6 +216,7 @@ img.small {
 	text-align: center;
 	line-height: 1em;
 	cursor: default;
+	margin: 0.25em;
 }
 
 #title.title-left {
@@ -248,6 +244,9 @@ img.small {
 /* scroll to top button */
 
 #scrolltotop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 50px;
 	height: 50px;
 	position: fixed;
@@ -334,7 +333,7 @@ img.small {
 }
 
 .header {
-	padding: 30px 20px 20px 20px;
+	padding: 10px;
 	color: #FFFFFF;
 	border-radius: 10px 10px 0px 0px;
 	text-align: center;
@@ -439,6 +438,35 @@ h2 {
 .half {
 	width: 40%;
 	margin: 5% 0;
+}
+
+.guides-carousel {
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+
+	scrollbar-width: thin;
+}
+
+.guides-carousel::-webkit-scrollbar {
+	background: transparent;
+	height: 8px;
+}
+
+.guides-carousel::-webkit-scrollbar-thumb {
+	background: var(--foreground);
+	border-radius: 4px;
+	box-shadow: 0px 0px 10px (--boxShadow)
+}
+
+.guide {
+	flex-shrink: 0;
+	width: 200px;
+	height: 300px;
+	background: pink;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 20px;
 }
 
 @keyframes fadeAnimation {
