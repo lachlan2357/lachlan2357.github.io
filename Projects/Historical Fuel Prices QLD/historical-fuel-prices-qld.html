@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="historical-fuel-prices-qld.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/d7146fbe0f.js" crossorigin="anonymous"></script>
+	<!-- <script src="../../javascript.js"></script> -->
+	<script src="historical-fuel-prices-qld.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+	<link rel="shortcut icon" type="image/png" href="../../images/pfp-circle.png">
+	<title>Historical Fuel Prices QLD</title>
+</head>
+<body>
+    <!-- hero -->
+    <header id="hero" class="hero-small">
+		<div class="hero-pattern-new"></div>
+		<div id="hero-text">
+			<h1 id="title" class="title-left">FUEL PRICES QLD</h1>
+
+			<div id="social-icons">
+				<ul>
+					<li class="social-icon"><a href="https://www.instagram.com/lachlan_2357" target="_blank" rel="noopener noreferrer" aria-label="my instagram page"><i class="fab fa-instagram"></i></a></li>
+					<li class="social-icon"><a href="https://github.com/lachlan2357" target="_blank" rel="noopener noreferrer" aria-label="my github page"><i class="fa fa-github"></i></a></li>
+					<li class="social-icon"><a href="mailto:lachlan.rehder@outlook.com" target="_blank" rel="noopener noreferrer" aria-label="send me an email"><i class="far fa-envelope"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+    <main>
+        <div class="container">
+            <div class="header gradient-small-purple">
+                <h2>Search</h2>
+            </div>
+            <div class="footer">
+                <h3>Search for a Servo</h3>
+                <form id="place-search" autocomplete="off">
+                    <div class="row">
+                        <label for="siteName"></label>
+                        <input type="text" id="siteName" name="siteName" placeholder="Site Name" list="SiteNames">
+                        <input type="button" id="submitButton" value="Add Site" onclick="addFilter('siteName')">
+                    </div>
+
+                    <input type="button" id="submitButton" value="Display" onclick="graphSite()">
+
+                    <div id="site-filter-display">
+                    
+                    </div>
+                </form>
+
+                <p class="h4 center">OR</p>
+                
+                <h3>Filter by Brand and/or Suburb</h3>
+                <form id="place-filter" autocomplete="off">
+                    <div class="row">
+                        <label for="brand"></label>
+                        <input type="text" id="brand" name="brand" placeholder="Brand" list="Brands">
+                        <input type="button" id="addBrand" value="Add Brand" onclick="graphSite()">
+                    </div>
+                    
+                    <div id="brand-filter-display">
+
+                    </div>
+                    
+                    <div class="row">
+                        <label for="suburb"></label>
+                        <input type="text" id="suburb" name="suburb" placeholder="Suburb" list="Suburbs">
+                        <input type="button" id="addSuburb" value="Add Suburb" onclick="addFilter('suburb')">
+                    </div>
+
+                    <input type="button" id="submitButton" value="Display" onclick="graphFiltered()">
+                    
+                    <div id="suburb-filter-display">
+                    
+                    </div>
+                </form>
+
+                <datalist id="SiteNames">
+
+                </datalist>
+
+                <datalist id="Brands">
+
+                </datalist>
+
+                <datalist id="Suburbs">
+
+                </datalist>
+            </div>
+        </div>
+
+        <canvas id="graph">
+
+        </canvas>
+    </main>
+
+
+    <footer class="container card">
+        <h2>Attributions:</h2>
+        <p>This project was made possibly using:</p>
+        <ul>
+            <li>
+                Queensland Government Open Data Portal @ <a href="https://www.data.qld.gov.au/dataset/fuel-price-reporting/resource/bbd2bfe0-f64b-4251-af57-c5673286aebb?truncate=30&inner_span=True">https://www.data.qld.gov.au/dataset/fuel-price-reporting/resource/bbd2bfe0-f64b-4251-af57-c5673286aebb?truncate=30&inner_span=True</a><br>Note: Some data gathered from the dataset was altered as it included many inconsistancies that would have to be programmed around. No fuel price data was changed in the process.
+                Changes: Changed names of the Caltex/Woolworths Parnership to "Caltex (Woolworths)"
+                         Fixed entries that didn't have a brand name
+                         Replaced "Caltex William St, Rockhampton" to "Caltex William St Rockhampton"
+
+            </li>
+            <li>
+                Chart.js @ <a href="https://www.chartjs.org/">https://www.chartjs.org/</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

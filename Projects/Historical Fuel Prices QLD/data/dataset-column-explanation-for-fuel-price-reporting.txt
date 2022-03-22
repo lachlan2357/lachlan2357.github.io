@@ -1,0 +1,17 @@
+This is an explanation of the column headings used in this series of datasets. It is recommended that first time users read this before attempting to use any of the CSV files.
+
+SiteId - The unique identifier of the fuel retailer site
+Site Name - The site name of the fuel retailer
+Site Brand - The site brand of the fuel retailer
+Sites Address Line 1 - The address of the fuel retailer
+Site Suburb - The suburb of the fuel retailer
+Site State - The state of the fuel retailer. This data includes fuel price information that appears to come from the New South Wales town of Mungindi however fuel prices being reported are located in Queensland. Mungindi is uniquely situated on both sides of the Barwon River and is in both Queensland and New South Wales. Mungindi has a New South Wales postcode.
+Site Post Code - The postcode of the fuel retailer
+Site Latitude - The latitude of the fuel retailer
+Site Longitude - The longtitude of the fuel retailer
+Fuel Type - The type of fuel of the fuel retailer
+Price - The price of fuel of the fuel retailer. Price is listed in tenths of a cent. i.e: A price of 1699 would be $1.69.9  
+Price - The price of 9999 denotes fuel stock that is temporarily unavailable e.g. tank empty and awaiting new stock.  
+TransactionDateUtc - The transaction date (and time) is listed in Coordinated Universal Time. Universal Time Coordinated is 10 hours behind Australian Eastern Standard Time (AEST). So 6:00 AM in UTC is 4:00 PM in AEST.
+
+
