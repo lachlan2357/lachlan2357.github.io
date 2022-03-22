@@ -48,7 +48,6 @@ async function loadData() {
             const deleteDB = indexedDB.deleteDatabase("db");
 
             deleteDB.onsuccess = function() {
-                alert("delete");
                 resolve();
             }
         });
