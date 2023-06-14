@@ -1,0 +1,237 @@
+@use "@/assets/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300&display=swap");
+
+:root {
+    --black: #111;
+    --dark: #222;
+    --med: #333;
+    --light: #555;
+    --bright: #fff;
+
+    --accent-one: #f159ff;
+    --accent-two: #aa60e6;
+    --accent-three: #876efa;
+    --accent-four: #6078e6;
+    --accent-five: #69b6fa;
+
+    --scrollbar-hover: #6a6a6a;
+
+    --radius: 10px;
+    --shadow: 0 0 10px var(--black);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--bright);
+    scrollbar-width: thin;
+    scrollbar-color: var(--light) var(--black);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+body {
+    @include mixins.flexbox(column);
+    background-color: var(--black);
+
+    > footer {
+        padding: 1em;
+        text-align: center;
+    }
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: var(--shadow);
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("/images/hero-background.svg");
+    background-size: 150%;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    position: absolute;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+#pfp {
+    width: 7.5rem;
+    border-radius: 50%;
+}
+
+main,
+section,
+footer {
+    @include mixins.flexbox(column);
+}
+
+.gradient-underline {
+    padding-bottom: 5px;
+    background-image: linear-gradient(
+        to right,
+        var(--accent-one),
+        var(--accent-two),
+        var(--accent-three),
+        var(--accent-four),
+        var(--accent-five)
+    );
+    background-size: 100% 25%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.gradient-underline-small {
+    padding-bottom: 2.5px;
+    background-image: linear-gradient(
+        to right,
+        var(--accent-one),
+        var(--accent-two),
+        var(--accent-three),
+        var(--accent-four),
+        var(--accent-five)
+    );
+    background-size: 0% 10%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    transition: 0.1s;
+}
+
+.gradient-underline-small:hover {
+    background-size: 100% 10%;
+}
+
+.card {
+    background-color: var(--dark);
+    border-radius: var(--radius);
+    overflow: hidden;
+    gap: 0;
+    padding: 1em;
+
+    &:has(.block) {
+        padding: 0;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 1em;
+        transition: font-size 0.1s;
+    }
+
+    .block {
+        background-image: linear-gradient(to bottom right, var(--accent-two), var(--accent-four));
+        padding-block: 2em;
+        text-align: center;
+    }
+
+    &.actionable:hover {
+        box-shadow: var(--shadow);
+
+        header {
+            font-size: 0.5rem;
+        }
+    }
+}
+.horizontal {
+    @include mixins.flexbox();
+    max-width: 100%;
+    flex-wrap: wrap;
+
+    &.nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &.scroll {
+        overflow-y: unset;
+        overflow-x: auto;
+    }
+}
+
+.scroll {
+    border-radius: var(--radius);
+    overflow-y: auto;
+    flex-wrap: nowrap;
+
+    > * {
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+}
+
+.chip {
+    display: block;
+    padding: 1em;
+    background-color: var(--dark);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+
+    &.coloured {
+        background-color: var(--_colour);
+    }
+}
+
+.container {
+    --percent-size: 90%;
+    --px-size: 1280px;
+    width: min(var(--percent-size), var(--px-size));
+    margin-inline: auto;
+
+    &.small {
+        --px-size: 720px;
+    }
+
+    &:has(.container) {
+        --percent-size: 100%;
+    }
+}
+
+.react-container {
+    container-type: inline-size;
+}
