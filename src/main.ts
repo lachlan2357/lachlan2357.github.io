@@ -4,8 +4,6 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 
-import "@/assets/base.scss";
-
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram, faGithub, faRedditAlien } from "@fortawesome/free-brands-svg-icons";
@@ -18,8 +16,11 @@ import {
     faBrush,
     faMapLocationDot,
     faGamepad,
+    faLink,
     faArrowUpRightFromSquare
 } from "@fortawesome/free-solid-svg-icons";
+
+import "@/assets/base.scss";
 
 const app = createApp(App);
 
@@ -38,6 +39,7 @@ library.add(
     faBrush,
     faMapLocationDot,
     faGamepad,
+    faLink,
     faArrowUpRightFromSquare
 );
 app.component("FontAwesomeIcon", FontAwesomeIcon);

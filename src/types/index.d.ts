@@ -28,6 +28,7 @@ export interface DisplayLink {
 
 export interface ChipData {
     name: string;
+    external: boolean;
     url?: string;
 }
 

@@ -5,8 +5,9 @@ import type { Component, HeaderInfo } from "@/types";
 import projects from "@/assets/projects";
 import TimelineView from "@/views/TimelineView.vue";
 import ContactView from "@/views/ContactView.vue";
+import NotFoundView from "@/views/NotFoundView.vue";
 
-const routeNames = ["home", "project", "timeline", "contact"] as const;
+const routeNames = ["home", "project", "timeline", "contact", "notFound"] as const;
 type RouteName = (typeof routeNames)[number];
 
 export const navEntries: Array<RouteName> = ["home", "timeline", "contact"];
@@ -14,7 +15,8 @@ export const routes: Record<RouteName, { path: string; name: RouteName; componen
     home: { path: "/", name: "home", component: HomeView },
     project: { path: "/past-projects/:project", name: "project", component: ProjectView },
     timeline: { path: "/timeline", name: "timeline", component: TimelineView },
-    contact: { path: "/contact", name: "contact", component: ContactView }
+    contact: { path: "/contact", name: "contact", component: ContactView },
+    notFound: { path: "/:pathMatch(.*)*", name: "notFound", component: NotFoundView }
 };
 
 export const headerInfo: Record<RouteName, HeaderInfo> = {
@@ -24,7 +26,8 @@ export const headerInfo: Record<RouteName, HeaderInfo> = {
             projects.find((project) => project.id === context)?.title ?? "Unknown Project"
     },
     timeline: { titleFn: () => "Timeline" },
-    contact: { titleFn: () => "Contact" }
+    contact: { titleFn: () => "Contact" },
+    notFound: { titleFn: () => "404 Not Found" }
 };
 
 const router = createRouter({

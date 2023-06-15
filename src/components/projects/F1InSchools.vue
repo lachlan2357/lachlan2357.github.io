@@ -7,13 +7,6 @@
             class="img-scroll"
         />
     </div>
-    <!--<iframe
-        src="https://vitesseracing1.wixsite.com/website"
-        frameborder="0"
-        width="100%"
-        height="500px"
-        loading="lazy"
-    ></iframe>-->
 
     <h3>Final Logo & Branding</h3>
     <div class="horizontal">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import ChipLinks from "@/components/ChipLinks.vue";
+    import ChipCollection from "@/components/ChipCollection.vue";
     import type { DisplayLink } from "@/types";
 
     const links: Array<DisplayLink> = [
@@ -14,7 +14,7 @@
         <img src="/images/pfp.png" alt="" id="pfp" />
         <h1>Lachlan Rehder</h1>
         <p>Current Student at QUT</p>
-        <ChipLinks :links="links" />
+        <ChipCollection :items="links" />
     </section>
 </template>
 
