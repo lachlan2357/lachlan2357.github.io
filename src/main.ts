@@ -21,6 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import "@/assets/base.scss";
+import LazyImage from "./components/LazyImage.vue";
 
 const app = createApp(App);
 
@@ -43,5 +44,6 @@ library.add(
     faArrowUpRightFromSquare
 );
 app.component("FontAwesomeIcon", FontAwesomeIcon);
+app.component("lazy-img", LazyImage);
 
 app.mount("body");

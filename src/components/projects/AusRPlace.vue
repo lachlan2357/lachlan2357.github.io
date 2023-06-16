@@ -1,9 +1,9 @@
 <template>
     <div id="grid">
-        <img src="/images/r-place-australia.png" alt="Australia Display" />
-        <img src="/images/r-place-anz.png" alt="Australia & New Zealand Display" />
-        <img src="/images/r-place-steve-irwin.png" alt="Steve Irwin Display" />
-        <img src="/images/r-place-uluru.png" alt="Uluru Display" />
+        <lazy-img src="/images/r-place-australia.png" alt="Australia Display" />
+        <lazy-img src="/images/r-place-anz.png" alt="Australia & New Zealand Display" />
+        <lazy-img src="/images/r-place-steve-irwin.png" alt="Steve Irwin Display" />
+        <lazy-img src="/images/r-place-uluru.png" alt="Uluru Display" />
     </div>
 </template>
 
