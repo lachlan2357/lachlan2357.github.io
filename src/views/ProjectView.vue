@@ -16,7 +16,7 @@
         <section class="card" id="project-card">
             <h2>About</h2>
             <p>{{ project.description }}</p>
-            <project.component />
+            <project.component v-if="project.component" />
         </section>
         <div id="halves">
             <section class="card">

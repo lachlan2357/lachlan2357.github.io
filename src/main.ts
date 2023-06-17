@@ -16,6 +16,7 @@ import {
     faBrush,
     faMapLocationDot,
     faGamepad,
+    faClone,
     faLink,
     faArrowUpRightFromSquare
 } from "@fortawesome/free-solid-svg-icons";
@@ -40,6 +41,7 @@ library.add(
     faBrush,
     faMapLocationDot,
     faGamepad,
+    faClone,
     faLink,
     faArrowUpRightFromSquare
 );

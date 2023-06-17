@@ -110,6 +110,17 @@ const projects: Array<Project> = [
             { name: "Website", url: "https://lachlan2357.github.io/game-collections" },
             { name: "GitHub Page", url: "https://github.com/lachlan2357/game-collections" }
         ]
+    },
+    {
+        id: "lazy-image-generator",
+        title: "Lazy Image Generator",
+        description:
+            "To assist in creating lazy-loading images using a smaller resolution version as a placeholder, I created a small NodeJS tool to automatically downscale a directory of images, ensuring they were always up-to-date.",
+        icon: "fa-solid fa-clone",
+        gradOne: "#6bb852",
+        gradTwo: "#3e853f",
+        roles: ["Creator", "Maintainer"],
+        links: [{ name: "GitHub Page", url: "https://github.com/lachlan2357/lazy-image-generator" }]
     }
 ].reverse();
 
