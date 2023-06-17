@@ -1,0 +1,23 @@
+@mixin flexbox($direction: row, $gap: 1em) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin container() {
+    margin-inline: auto;
+    width: min(90%, 1280px);
+
+    .container {
+        width: min(100%, 1280px);
+    }
+}
+
+@mixin container-small() {
+    margin-inline: auto;
+    width: min(90%, 720px);
+
+    .container-small {
+        width: min(100%, 720px);
+    }
+}
