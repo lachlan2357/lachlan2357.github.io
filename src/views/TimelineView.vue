@@ -1,7 +1,14 @@
 <script setup lang="ts">
+    import projects from "@/assets/projects";
     import timeline from "@/assets/timeline";
     import ChipCollection from "@/components/ChipCollection.vue";
     import { numToMonth } from "@/types/supplements";
+
+    const allElements = [...projects, ...timeline].sort((a, b) => {
+        const weightA = a.year + a.month / 12;
+        const weightB = b.year + b.month / 12;
+        return weightB - weightA;
+    });
 </script>
 
 <template>
@@ -10,13 +17,13 @@
     <h2>Timeline</h2>
     <section id="timeline" class="react-container">
         <!-- line -->
-        <svg width="20" height="100%" id="top">
+        <svg width="20" height="100%" id="top" :style="{ gridRowEnd: allElements.length + 2 }">
             <rect width="5" height="100%" x="7.5" rx="2.5" />
         </svg>
 
         <!-- articles -->
         <article
-            v-for="(event, i) in timeline"
+            v-for="(event, i) in allElements"
             :key="event.title"
             class="card"
             :style="{ gridRow: i + 2 }"
@@ -29,7 +36,7 @@
         </article>
 
         <!-- graphics -->
-        <div v-for="(_event, i) in timeline" :key="i" class="dot" :style="{ gridRow: i + 2 }">
+        <div v-for="(_event, i) in allElements" :key="i" class="dot" :style="{ gridRow: i + 2 }">
             <svg width="20" height="100%">
                 <circle r="7.5" cx="10" cy="25px" />
             </svg>
@@ -69,15 +76,15 @@
         }
     }
 
-    svg#top {
+    #top {
         grid-column: 2;
         grid-row-start: 1;
-        grid-row-end: 10;
         fill: var(--bright);
     }
 
     .dot {
         grid-column: 2;
+        grid-row: 1 -1;
 
         svg {
             fill: var(--bright);
