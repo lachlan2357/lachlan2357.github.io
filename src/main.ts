@@ -18,7 +18,8 @@ import {
     faGamepad,
     faClone,
     faLink,
-    faArrowUpRightFromSquare
+    faArrowUpRightFromSquare,
+	faBrain
 } from "@fortawesome/free-solid-svg-icons";
 
 import "@/assets/base.scss";
@@ -43,7 +44,8 @@ library.add(
     faGamepad,
     faClone,
     faLink,
-    faArrowUpRightFromSquare
+    faArrowUpRightFromSquare,
+	faBrain
 );
 app.component("FontAwesomeIcon", FontAwesomeIcon);
 app.component("lazy-img", LazyImage);
