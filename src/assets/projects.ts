@@ -5,6 +5,7 @@ import F1InSchools from "@/components/projects/F1InSchools.vue";
 import AusRPlace from "@/components/projects/AusRPlace.vue";
 import MergeOSM from "@/components/projects/MergeOSM.vue";
 import GameCollections from "@/components/projects/GameCollections.vue";
+import JustThink from "@/components/projects/JustThink.vue";
 
 const projects: Array<Project> = [
     {
@@ -134,7 +135,21 @@ const projects: Array<Project> = [
         gradTwo: "#3e853f",
         roles: ["Creator", "Maintainer"],
         links: [{ name: "GitHub Page", url: "https://github.com/lachlan2357/lazy-image-generator" }]
-    }
+    },
+	{
+		id: "just-think-responses",
+		title: "Just, Think",
+		description:
+			"My capstone project from studying Interaction Design at QUT led me to creating a platform where attendees of the festival could put a message out to the rest of the festival - and the world. These are those messages.",
+		month: 11,
+		year: 2025,
+		icon: "fa-solid fa-brain",
+		gradOne: "lightblue",
+		gradTwo: "rgb(19, 79, 99)",
+		component: JustThink,
+		roles: ["Creator"],
+		links: [{ name: "QUT Interaction Design Festival Page", url: "https://interaction.2025.qutdesignfestival.com.au/projects/just-think/" }]
+	}
 ].reverse();
 
 export default projects;
